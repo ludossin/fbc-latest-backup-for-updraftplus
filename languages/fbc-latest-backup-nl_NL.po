@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FBC Latest Backup Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-08 15:10+0000\n"
+"PO-Revision-Date: 2021-03-12 15:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Loco-Version: 2.5.1; wp-5.6.2\n"
+"X-Domain: fbc-latest-backup\n"
+
+#: admin/widget.php:81
+msgid "Completed"
+msgstr "Voltooid"
+
+#: admin/widget.php:71
+msgid "Date"
+msgstr "Datum"
+
+#. Description of the plugin
+msgid "Adds a widget to the dashboard, letting you know the date and time of latest backup and how many edits were made since then, if any"
+msgstr "Voegt een widget toe aan het dashboard, zodat u de datum en tijd van de laatste back-up weet en hoeveel bewerkingen er sindsdien zijn aangebracht"
+
+#: admin/widget.php:60
+msgid "Edit since last backup"
+msgstr "Aanpassing sinds de laatste backup"
+
+#: admin/widget.php:58
+msgid "Edits since last backup"
+msgstr "Aanpassingen sinds de laatste backup"
+
+#. Name of the plugin
+msgid "FBC Latest Backup for UpdraftPlus"
+msgstr "FBC Latest Backup for UpdraftPlus"
+
+#: admin/widget.php:99 admin/widget.php:107
+msgid "Latest Backup"
+msgstr "Laatste Backup"
+
+#: admin/widget.php:92
+msgid "No information available. Please check if at least one backup has been made."
+msgstr "Geen informatie beschikbaar. Controleer of tenminste een backup is voltooid."
+
+#: admin/widget.php:21
+msgid "No information available. Please make sure that UpdraftPlus Backup plugin is installed and activated."
+msgstr "Geen informatie beschikbaar. Controleer of de UpdraftPlus Backup plugin is geïnstalleerd en geactiveerd."
+
+#: admin/widget.php:68
+msgid "Status"
+msgstr "Status"
+
+#: admin/widget.php:74
+msgid "Time"
+msgstr "Tijd"

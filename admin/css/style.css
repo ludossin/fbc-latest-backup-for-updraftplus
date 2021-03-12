@@ -1,0 +1,12 @@
+table{width: 100%; text-align: left;}
+.edits-since-wrapper{text-align: center;}
+.number-heading {align-self: center;}
+.edits-since {
+    display: inline-block;
+    font-size: 1.75em;
+    font-weight: 700;
+    line-height: 1.75em;
+    text-align: center;
+}
+.green{color: #a8d657;}
+.red{color: #d6372f;}
