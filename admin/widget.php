@@ -27,11 +27,14 @@ function fbc_latest_backup_dashboard_widget_display(){
 
         $fbc_latest_backup_backup_check = date( 'Y-m-j G:i:s', $fbc_latest_backup_last_backup["backup_time"] );
 
+        $fbc_post_types = [];
+
         $args = array(
-            'post_status'   => 'publish',
+            'post_type'     => 'any',
+            'post_status'   => array('publish','inherit'),
             'date_query'    => array(
-                'column'  => 'post_modified_gmt',
-                 'after'   => $fbc_latest_backup_backup_check
+                'column'    => 'post_modified_gmt',
+                 'after'    => $fbc_latest_backup_backup_check
             )
         );
         $fbc_latest_backup_query = new WP_Query($args);
@@ -39,32 +42,60 @@ function fbc_latest_backup_dashboard_widget_display(){
         $fbc_latest_backup_color = 'green';
         if ( $fbc_latest_backup_query->have_posts() ) :
             while ( $fbc_latest_backup_query->have_posts() ) :
-                $fbc_latest_backup_count++;
                 $fbc_latest_backup_query->the_post();
+                array_push($fbc_post_types, [get_post_type(), get_the_title()]);
+                $fbc_latest_backup_count++;
             endwhile;
         endif;
         wp_reset_postdata();
+
+        foreach ($fbc_post_types as $key => $item) {
+           $arr[$item[0]][$key] = $item;
+        }
+        ksort($arr, SORT_NUMERIC);
 
         if ($fbc_latest_backup_count > 0) {
             $fbc_latest_backup_color = 'red';
         }
         ?>
-        <div class='edits-since-wrapper'>
-          <p><span class='edits-since <?php echo $fbc_latest_backup_color; ?>'> <?php echo $fbc_latest_backup_count; ?>
+        <div class='edits_since_wrapper'>
+          <p><span class='edits_since <?php echo $fbc_latest_backup_color; ?>'> <?php echo $fbc_latest_backup_count; ?>
           </span>
-          <span class='number-heading'><?php
+          <span class='number_heading'><?php
           if (1 !== $fbc_latest_backup_count) {
             _e( 'Edits since last backup', 'fbc-latest-backup' );
           } else {
             _e( 'Edit since last backup', 'fbc-latest-backup' );
           }
             ?>
-         </span></p>
+         </span>
+       </p>
+        </div>
+        <div class='edits_count_wrapper'>
+
+          <?php
+          if ($fbc_latest_backup_count >= 1) {
+            echo '<p><span>Content Type</span><span>Edits</span></p>';
+            foreach ($arr as $type => $p) {
+            ?>
+              <div class='edits_count_content'>
+              <?php
+              if ($type){
+                echo '<span>' . $type . '</span><span>' . count($p) . '</span>';
+              }else{
+                echo '<span>undefined</span><span>' . count($p) . '</span>';
+              }
+              ?>
+              </div>
+            <?php
+            }
+          }
+          ?>
         </div>
         <table><thead>
           <tr>
             <th>
-              <?php _e( 'Status', 'fbc-latest-backup' ); ?>
+              <?php _e( 'Backup Status', 'fbc-latest-backup' ); ?>
             </th>
             <th>
               <?php _e( 'Date', 'fbc-latest-backup' ); ?>

@@ -1,12 +1,31 @@
 table{width: 100%; text-align: left;}
-.edits-since-wrapper{text-align: center;}
-.number-heading {align-self: center;}
-.edits-since {
+.edits_since_wrapper{text-align: center;}
+.number_heading {align-self: center;}
+.edits_since {
     display: inline-block;
     font-size: 1.75em;
     font-weight: 700;
     line-height: 1.75em;
     text-align: center;
+}
+.edits_count_wrapper{
+  display: flex;
+  padding: 0 2px;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.edits_count_wrapper p:first-of-type {
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.edits_count_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.5em 0 0 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgb(240, 240, 241);
+  width: 100%;
 }
 .green{color: #a8d657;}
 .red{color: #d6372f;}
