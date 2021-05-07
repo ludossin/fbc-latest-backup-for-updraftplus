@@ -10,7 +10,11 @@ This plugin is an extension of UpdraftPlus: it adds a dashboard widget showing t
 
 The plugin is currently available for use with UpdraftPlus Backup but it will 'fail silently' if used with another backup plugin (you will see a message telling you to make sure UpdraftPlus Backup plugin is installed and activated).
 
-## Changelog 
+## Changelog
+
+= 1.1 =
+* Added support for custom post type and attachment edits.
+* Fixed small bug preventing page edits from being listed.
 
 = 1.0 =
 * Initial release.
