@@ -12,6 +12,9 @@ The plugin is currently available for use with UpdraftPlus Backup but it will 'f
 
 ## Changelog
 
+= 1.1.1 =
+* Fixed typo in version number, main file.
+
 = 1.1 =
 * Added support for custom post type and attachment edits.
 * Fixed small bug preventing page edits from being listed.
