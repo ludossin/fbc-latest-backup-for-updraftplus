@@ -12,6 +12,9 @@ The plugin is currently available for use with UpdraftPlus Backup but it will 'f
 
 ## Changelog
 
+= 1.1.2 =
+* Adjusted plugin header to match supported and tested WordPress versions.
+
 = 1.1.1 =
 * Fixed typo in version number, main file.
 
