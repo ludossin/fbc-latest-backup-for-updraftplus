@@ -12,6 +12,9 @@ The plugin is currently available for use with UpdraftPlus Backup but it will 'f
 
 ## Changelog
 
+= 1.1.3 =
+* Fixed minor logic gap which was causing a PHP Warning when trying to `ksort()` an empty array.
+
 = 1.1.2 =
 * Adjusted plugin header to match supported and tested WordPress versions.
 

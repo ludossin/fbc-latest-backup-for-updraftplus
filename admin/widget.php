@@ -49,10 +49,12 @@ function fbc_latest_backup_dashboard_widget_display(){
         endif;
         wp_reset_postdata();
 
-        foreach ($fbc_post_types as $key => $item) {
-           $arr[$item[0]][$key] = $item;
+        if (count($fbc_post_types) > 0) {
+          foreach ($fbc_post_types as $key => $item) {
+             $arr[$item[0]][$key] = $item;
+          }
+          ksort($arr, SORT_NUMERIC);
         }
-        ksort($arr, SORT_NUMERIC);
 
         if ($fbc_latest_backup_count > 0) {
             $fbc_latest_backup_color = 'red';
