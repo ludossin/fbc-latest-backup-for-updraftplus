@@ -2,8 +2,8 @@
 /*
 Plugin Name: FBC Latest Backup for UpdraftPlus
 PluginURI: https://github.com/ludossin/fbc-latest-backup-for-updraftplus
-Description: Adds a widget to the dashboard, letting you know the date and time of latest backup and how many edits were made since then, if any
-Version: 1.1.3
+Description: Adds a widget to the dashboard, letting you know the date and time of latest backup and how many edits were made since then, if any. Please consider leaving <a href="https://wordpress.org/support/plugin/fbc-latest-backup-for-updraftplus/reviews/">a review</a> if you have been using this plugin for a while.
+Version: 1.1.4
 Author: Lucia Dossin
 Text Domain:  fbc-latest-backup
 Domain Path:  /languages

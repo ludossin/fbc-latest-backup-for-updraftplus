@@ -10,7 +10,13 @@ This plugin is an extension of UpdraftPlus: it adds a dashboard widget showing t
 
 The plugin is currently available for use with UpdraftPlus Backup but it will 'fail silently' if used with another backup plugin (you will see a message telling you to make sure UpdraftPlus Backup plugin is installed and activated).
 
+Please consider leaving [a review]( https://wordpress.org/support/plugin/fbc-latest-backup-for-updraftplus/reviews/) if you have been using this plugin for a while.
+
 ## Changelog
+
+= 1.1.4 =
+* Added review request.
+* Updated tested WP version.
 
 = 1.1.3 =
 * Fixed minor logic gap which was causing a PHP Warning when trying to `ksort()` an empty array.
